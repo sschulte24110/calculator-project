@@ -8,30 +8,31 @@
 </head>
 <body>
     <!-- <h1 class="title">Calculator</h1> -->
-        <div id="container">
-            <p class="brand">Pelican Instruments</p>
-            <p class="display"></p>
-            <p class="model">PI-82+</p>
-            <div class="buttons">
-                <button class="clear">AC</button>
+        <div class="container">
+            <div class="display-container">
+                <p class="brand">Pelican Instruments</p>
+                <p class="display">0</p>
+                <p class="model">PI-82+</p>
+            </div>
+            <div class="button-container">
+                <button class="clear" data-action="clear">AC</button>
                 <button class="delete">DEL</button>
-                <button class="blank">+/-</button>
-                <button id="operator" class="divide">/</button>
-                <button class="n9">9</button>
-                <button class="n8">8</button>
+                <button id="operator" data-action="divide">/</button>
                 <button class="n7">7</button>
-                <button id="operator" class="multiply">*</button>
-                <button class="n6">6</button>
-                <button class="n5">5</button>
+                <button class="n8">8</button>
+                <button class="n9">9</button>
+                <button id="operator" data-action="multiply">*</button>
                 <button class="n4">4</button>
-                <button id="operator" class="minus">-</button>
-                <button class="n3">3</button>
-                <button class="n2">2</button>
+                <button class="n5">5</button>
+                <button class="n6">6</button>
+                <button id="operator" data-action="subtract">-</button>
                 <button class="n1">1</button>
-                <button id="operator" class="plus">+</button>
+                <button class="n2">2</button>
+                <button class="n3">3</button>
+                <button id="operator" data-action="add">+</button>
                 <button class="n0">0</button>
-                <button class="point">.</button>
-                <button id="operator" class="equals">=</button>
+                <button data-action="decimal">.</button>
+                <button id="equals-key" data-action="calculate">=</button>
             </div>
             
             
