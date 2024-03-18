@@ -1,7 +1,4 @@
 
-// const button = document.querySelectorAll('button');
-//     button.addEventListener('click', )
-
 
 // Operation functions
 const add = (a, b) => a + b;
