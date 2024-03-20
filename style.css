@@ -16,7 +16,7 @@ body {
     height: 100vh;
 }
 
-.container {
+.calculator {
     width: 300px;
     height: 420px;
     background-color: steelblue;
@@ -67,12 +67,15 @@ button {
 #operator {
     background-color: antiquewhite;
 }
+#equals-key {
+    background-color: red;
+}
 
-.n0 {
+#n0 {
     width: 124px;
 }
 
-.clear {
+.all-clear {
     width: 124px;
 }
 
