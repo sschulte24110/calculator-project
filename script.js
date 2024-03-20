@@ -4,6 +4,7 @@ const operators = document.querySelectorAll('.operator');
 const allClear = document.querySelector('.all-clear');
 const decimal = document.querySelector('.decimal');
 const equals = document.querySelector('.operator');
+const backspace = document.querySelector('.delete');
 
 // Variables for each part of the calculator operation
 let firstInput = '';
@@ -58,6 +59,16 @@ function setDisplayText(text) {
     display.textContent = text;
 };
 
+backspace.addEventListener('click', () => {
+    eraseLastDigit();
+});
+
+// Need to figure this out!
+function eraseLastDigit() {
+    let displayText = display.textContent;
+    display.textContent = displayText.slice(0, displayText.length - 1);
+    eraseLastDigit();
+}
 
 function resetCalculator() {
     firstInput = '';
