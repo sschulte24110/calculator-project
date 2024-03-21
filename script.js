@@ -1,4 +1,5 @@
 const display = document.querySelector('.display');
+display.textContent = '0';
 const numbers = document.querySelectorAll('.number');
 const operators = document.querySelectorAll('.operator');
 const allClear = document.querySelector('.all-clear');
@@ -51,10 +52,6 @@ function setOperator(operator) {
     secondInput = '';
 };
 
-allClear.addEventListener('click', () => {
-    resetCalculator();
-});
-
 function setDisplayText(text) {
     display.textContent = text;
 };
@@ -65,16 +62,21 @@ backspace.addEventListener('click', () => {
 
 // Need to figure this out!
 function eraseLastDigit() {
-    let displayText = display.textContent;
-    display.textContent = displayText.slice(0, displayText.length - 1);
-    eraseLastDigit();
-}
+    let text = display.textContent;
+    display.textContent = text.slice(0, text.length - 1);
+    console.log(text);
+};
+
+allClear.addEventListener('click', () => {
+    resetCalculator();
+});
 
 function resetCalculator() {
     firstInput = '';
     currentOperator ='';
     secondInput = '';
     setDisplayText(firstInput);
+    display.textContent = '0';
 }
 
 function operate (firstInput, secondInput, operator) {
@@ -105,6 +107,7 @@ function operate (firstInput, secondInput, operator) {
             case '=': 
                 result = secondInput;  
         };
+        result = Math.round(result * 100000) / 100000;
         return result;
 }
 
