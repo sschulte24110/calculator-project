@@ -25,7 +25,7 @@ function setSecondInput(number) {
     } else {
         secondInput = secondInput.concat(number);
     }
-};
+}
 
 decimal.addEventListener('click', () => {
     if(!secondInput.includes('.')) {
@@ -38,7 +38,7 @@ operators.forEach((operator) => {
     operator.addEventListener('click', () => {
         setOperator(operator.textContent);
     })
-}); 
+});
 
 function setOperator(operator) {
     if (firstInput !== '' && secondInput !== '') {
@@ -50,22 +50,21 @@ function setOperator(operator) {
         firstInput = secondInput;
     }
     secondInput = '';
-};
+}
 
 function setDisplayText(text) {
     display.textContent = text;
-};
+}
 
 backspace.addEventListener('click', () => {
     eraseLastDigit();
-});
+})
 
 // Need to figure this out!
 function eraseLastDigit() {
-    let text = display.textContent;
-    display.textContent = text.slice(0, text.length - 1);
-    console.log(text);
-};
+    secondInput = display.textContent.slice(0, display.textContent.length - 1);
+    setDisplayText(secondInput);
+}
 
 allClear.addEventListener('click', () => {
     resetCalculator();
