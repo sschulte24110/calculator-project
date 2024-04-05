@@ -60,7 +60,6 @@ backspace.addEventListener('click', () => {
     eraseLastDigit();
 })
 
-// Need to figure this out!
 function eraseLastDigit() {
     secondInput = display.textContent.slice(0, display.textContent.length - 1);
     setDisplayText(secondInput);
